@@ -1,0 +1,6 @@
+{
+    "idf.gitPathWin": "C:\\Espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
+    "files.associations": {
+        "new": "cpp"
+    }
+}
