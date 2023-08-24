@@ -750,7 +750,7 @@ const char status_json[] PROGMEM = R"rawliteral(
   {"ssid":"zodmgbbq","ip":"192.168.1.119","netmask":"255.255.255.0","gw":"192.168.1.1","urc":0}
 )rawliteral";
 
-const char connect_json[] PROGMEM = R"rawliteral(
-<html>
-</html>
-)rawliteral";
+// const char connect_json[] PROGMEM = R"rawliteral(
+// <html>
+// </html>
+// )rawliteral";

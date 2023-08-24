@@ -9,4 +9,4 @@ extern const char code_js[] PROGMEM;
 
 extern const char status_json[] PROGMEM;
 
-extern const char connect_json[] PROGMEM;
+// extern const char connect_json[] PROGMEM;
