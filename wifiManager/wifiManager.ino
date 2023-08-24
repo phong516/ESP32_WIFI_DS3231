@@ -3,9 +3,12 @@
 #include <AsyncTCP.h>
 #include <DNSServer.h>
 #include "webDesign.h"
+#include <ArduinoJson.h>
+#include "wifiScan.h"
 
 DNSServer dnsServer;
 AsyncWebServer server(80);
+String ap_json;
 
 class CaptiveRequestHandler : public AsyncWebHandler{
   public:
@@ -43,21 +46,20 @@ void setupServer(){
   });
 
   server.on("/ap.json", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/json", ap_json);
+    request->send(200, "application/json", ap_json);
     Serial.println("SEND AP JSON");
   });
 
   server.on("/status.json", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/json", status_json);
+    request->send_P(200, "application/json", status_json);
     Serial.println("SEND STATUS JSON");
   });
 
   server.on("/connect.json", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/json", connect_json);
+    request->send_P(200, "application/json", connect_json);
     Serial.println("SEND CONNECT JSON");
   });
 };
-
 
 
 void setup() {
@@ -65,6 +67,9 @@ void setup() {
 
   Serial.println("MODE: WIFI_AP");
   WiFi.mode(WIFI_AP);
+
+  ap_json = getWiFiAvailable();
+  Serial.println(ap_json);
 
   Serial.println("SET SSID");
   WiFi.softAP("PHONG_PORTAL");

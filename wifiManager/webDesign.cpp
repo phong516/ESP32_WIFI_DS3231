@@ -731,20 +731,20 @@ async function checkStatus(url = "status.json") {
 }
 )rawliteral";
 
-const char ap_json[] PROGMEM = R"rawliteral(
-[
-{"ssid":"Pantum-AP-A6D49F","chan":11,"rssi":-55,"auth":4},
-{"ssid":"a0308","chan":1,"rssi":-56,"auth":3},
-{"ssid":"dlink-D9D8","chan":11,"rssi":-82,"auth":4},
-{"ssid":"Linksys06730","chan":7,"rssi":-85,"auth":3},
-{"ssid":"SINGTEL-5171","chan":9,"rssi":-88,"auth":4},
-{"ssid":"1126-1","chan":11,"rssi":-89,"auth":4},
-{"ssid":"The Shah 5GHz-2","chan":1,"rssi":-90,"auth":3},
-{"ssid":"SINGTEL-1D28 (2G)","chan":11,"rssi":-91,"auth":3},
-{"ssid":"dlink-F864","chan":1,"rssi":-92,"auth":4},
-{"ssid":"dlink-74F0","chan":1,"rssi":-93,"auth":4}
-]
-)rawliteral";
+// const char ap_json[] PROGMEM = R"rawliteral(
+// [
+// {"ssid":"Pantum-AP-A6D49F","chan":11,"rssi":-55,"auth":4},
+// {"ssid":"a0308","chan":1,"rssi":-56,"auth":3},
+// {"ssid":"dlink-D9D8","chan":11,"rssi":-82,"auth":4},
+// {"ssid":"Linksys06730","chan":7,"rssi":-85,"auth":3},
+// {"ssid":"SINGTEL-5171","chan":9,"rssi":-88,"auth":4},
+// {"ssid":"1126-1","chan":11,"rssi":-89,"auth":4},
+// {"ssid":"The Shah 5GHz-2","chan":1,"rssi":-90,"auth":3},
+// {"ssid":"SINGTEL-1D28 (2G)","chan":11,"rssi":-91,"auth":3},
+// {"ssid":"dlink-F864","chan":1,"rssi":-92,"auth":4},
+// {"ssid":"dlink-74F0","chan":1,"rssi":-93,"auth":4}
+// ]
+// )rawliteral";
 
 const char status_json[] PROGMEM = R"rawliteral(
   {"ssid":"zodmgbbq","ip":"192.168.1.119","netmask":"255.255.255.0","gw":"192.168.1.1","urc":0}
